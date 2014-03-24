@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+	<ResearchProjectDef>
+			<defName>NuclearFusion</defName>
+			<label>Nuclear Fusion</label>
+			<descriptionBefore>Learn how to build nuclear reactors.</descriptionBefore>
+			<descriptionDiscovered>You may now build nuclear reactors.</descriptionDiscovered>
+			<totalCost>150000</totalCost>
+			<prerequisites></prerequisites>
+	</ResearchProjectDef>
+
+
+</ResearchProjectDefs>

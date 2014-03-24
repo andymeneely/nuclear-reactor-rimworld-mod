@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<bulletImpactSound>BulletImpactMetal</bulletImpactSound>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<surfaceNeeded>Light</surfaceNeeded>
+		<constructionEffect>ConstructMetal</constructionEffect>
+		<repairEffect>Repair</repairEffect>
+	</ThingDef>
+
+
+	<!-- ========================= Power-related ===============================-->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>NuclearReactor</defName>
+		<eType>Building_PowerPlantGeothermal</eType>
+		<label>Nuclear Reactor</label>
+		<thingClass> Building_PowerPlantSteam</thingClass>
+		<texturePath>Things/Building/NuclearReactor</texturePath>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<maxHealth>100</maxHealth>
+		<flammability>1.5</flammability>
+		<tickerType>Normal</tickerType>
+		<description>Produces electricity from enriched uranium. Can cause electrical fires. Do not let it be destroyed.</description>
+		<size>(6,6)</size>
+		<workToBuild>1000</workToBuild>
+		<costList>
+			<li>
+				<thingDef>Metal</thingDef>
+				<count>500</count>
+			</li>
+			<li>
+				<thingDef>Uranium</thingDef>
+				<count>100</count>
+			</li>
+		</costList>
+		<overdraw>false</overdraw>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-6000</basePowerConsumption>
+				<startElectricalFires>true</startElectricalFires>
+			</li>
+			<li>
+				<compClass>CompExplosive</compClass>
+				<explosiveRadius>10</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+			</li>
+		</comps>
+		<killedLeavings>
+			<li>
+				<thingDef>DebrisSlag</thingDef>
+				<count>16</count>
+			</li>
+		</killedLeavings>
+		<filthLeavings>
+			<li>
+				<thingDef>SlagRubble</thingDef>
+				<count>3</count>
+			</li>
+		</filthLeavings>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<surfaceNeeded>Heavy</surfaceNeeded>
+		<designationCategory>Building</designationCategory>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<researchPrerequisite>NuclearFusion</researchPrerequisite>
+		<transmitsPower>true</transmitsPower>
+		<placementRestrictions>
+		</placementRestrictions>
+	</ThingDef>
+</Buildings>
+
+
