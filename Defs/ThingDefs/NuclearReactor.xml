@@ -29,28 +29,32 @@
 		<flammability>1.5</flammability>
 		<tickerType>Normal</tickerType>
 		<description>Produces electricity from enriched uranium. Can cause electrical fires. Do not let it be destroyed.</description>
-		<size>(6,6)</size>
+		<size>(10,10)</size>
 		<workToBuild>1000</workToBuild>
 		<costList>
 			<li>
 				<thingDef>Metal</thingDef>
-				<count>500</count>
+				<count>300</count>
 			</li>
 			<li>
 				<thingDef>Uranium</thingDef>
 				<count>100</count>
+			</li>
+			<li>
+				<thingDef>StoneBlocks</thingDef>
+				<count>500</count>
 			</li>
 		</costList>
 		<overdraw>false</overdraw>
 		<comps>
 			<li>
 				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>-6000</basePowerConsumption>
+				<basePowerConsumption>-8000</basePowerConsumption>
 				<startElectricalFires>true</startElectricalFires>
 			</li>
 			<li>
 				<compClass>CompExplosive</compClass>
-				<explosiveRadius>10</explosiveRadius>
+				<explosiveRadius>12</explosiveRadius>
 				<explosiveDamageType>Bomb</explosiveDamageType>
 			</li>
 		</comps>
@@ -66,7 +70,7 @@
 				<count>3</count>
 			</li>
 		</filthLeavings>
-		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<surfaceNeeded>Heavy</surfaceNeeded>
 		<designationCategory>Building</designationCategory>
 		<staticSunShadowHeight>1.0</staticSunShadowHeight>
